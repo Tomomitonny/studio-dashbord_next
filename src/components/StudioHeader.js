@@ -36,7 +36,7 @@ export function StudioHeader() {
     
     
     <header
-      className="w-full flex">
+      className="w-full flex fixed z-10 bg-white">
         <div
           className="h-[76px] bg-white flex justify-center items-center">
           <div

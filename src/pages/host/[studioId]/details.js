@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { StudioHeader } from '../../../components/StudioHeader';
+import { StudioDashboardSidebar } from '../../../components/StudioDashboardSidebar'
 
 export default function StudioIdDetails() {
 
@@ -57,53 +58,21 @@ export default function StudioIdDetails() {
 
   return (
     <div>
+        <StudioHeader />
+        <StudioDashboardSidebar /> 
       
       <div>
-        <StudioHeader />
-        koooooo
-    <div
-      className="bg-gray-100 w-full min-h-screen pb-10">
-      <div
-        className="bg-white border border-gray-300 pl-72 text-left">
-          <div
-            className="text-sm font-semibold text-gray-500 mt-6">
-              Back to Studios
-          </div>
-          <div
-            className="text-xl font-semibold mt-2">
-              Un Dance Studio
-          </div>
-
         <div
-          className="flex mt-6 text-sm text-gray-500 gap-10">
+          className="bg-gray-100 w-full min-h-screen pb-10">
+
           
-          <button
-            className="px-2.5 py-2.5 hover:text-blue-500 transition-all duration-200 border-b-2 border-transparent hover:border-blue-500">
-              Details
-          </button>
-          <button
-            className="px-2.5 py-2.5 hover:text-blue-500 transition-all duration-200 border-b-2 border-transparent hover:border-blue-500">
-              Rooms
-          </button>
-          <button
-            className="px-2.5 py-2.5 hover:text-blue-500 transition-all duration-200 border-b-2 border-transparent hover:border-blue-500">
-              Meida
-          </button>
-          <button
-            className="px-2.5 py-2.5 hover:text-blue-500 transition-all duration-200 border-b-2 border-transparent hover:border-blue-500">
-              Instructor
-          </button>
-          <button
-            className="px-2.5 py-2.5 hover:text-blue-500 transition-all duration-200 border-b-2 border-transparent hover:border-blue-500">
-              Lessons
-          </button>
-
-          </div>
-      </div>
-
 
         <div
-          className="mt-10 pl-72">
+          className="pt-20 pl-72">       
+            <div
+              className='my-10 bold text-3xl text-black'>
+                Studio Details
+              </div>
 
             <form onSubmit={handleSubmit}>
                   <div className="mb-10 p-6 w-[600px] bg-white text-left text-xs relative">

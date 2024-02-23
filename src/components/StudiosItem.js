@@ -3,7 +3,8 @@ export const StudioItem = ({ status, rooms, lessons, location }) => {
   return (
 
         <div
-          className="">
+          className=""
+        >
             <div
               className="grid grid-cols-7 py-4 min-w-fit text-left items-center text-sm border border-gray-300">
                 <div
