@@ -1,7 +1,7 @@
 import React from "react";
 import { StudioHeader } from '../../../components/StudioHeader';
 import { StudioDashboardSidebar } from '../../../components/StudioDashboardSidebar'
-
+import { Rooms } from '../../../data/exportConstRooms'
 
 function TableHeader() {
   return (   
@@ -93,7 +93,7 @@ function TableBody({ data }) {
             <div 
               className="bg-gray-300 w-28 h-16 mr-4"
             ></div>
-            {item.room}
+            {item.roomName}
           </td>
           <td 
             className="px-6 py-4"
@@ -107,12 +107,13 @@ function TableBody({ data }) {
             className="px-6 py-4"
             >{item.description}
           </td>
-          <td>
+          <td
+            className="px-6 py-4"
+          >
             <div
               className=
-              {item.status === 'public' ? 
-              'w-fit px-2.5 py-1 rounded-md bg-green-100 text-green-800 font-medium text-xs' : ''}>
-                    {item.status === 'public' ? 'Public' : ''}
+              'w-fit px-2.5 py-1 rounded-md bg-green-100 text-green-800 font-medium text-xs'>
+                    Public
             </div>
           </td>
         </tr>
@@ -123,23 +124,6 @@ function TableBody({ data }) {
 }
 
 export default function StudioIdRooms() {
-  const tableData = [
-    {
-      room: "Room 1",
-      size: "Large",
-      purpose: "Meeting",
-      description: "Large conference room",
-      status: ""
-    },
-    {
-      room: "Room 2",
-      size: "Small",
-      purpose: "Interview",
-      description: "Small interview room",
-      status: "public"
-    }
-  ];
-
   return (
     <div>
       <StudioHeader />
@@ -168,7 +152,7 @@ export default function StudioIdRooms() {
                     w-full text-sm text-left rtl:text-right text-gray-500
                   ">
                     <TableHeader />
-                    <TableBody data={tableData} />
+                    <TableBody data={Rooms} />
                   </table>
                 </div>
             </div>

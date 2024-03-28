@@ -14,25 +14,28 @@ function InstructorCard({ data, onClick }) {
           <div className="">
             <div className="flex items-center">
               <div className="">
-                <div className="bg-gray-300 w-[90px] h-[90px] rounded-full mr-6"></div>
+              <div
+              className=
+              {item.profilePicture === null ? 
+              'bg-gray-300 w-[90px] h-[90px] rounded-full mr-6' : ''}>
+            </div>
               </div>
               <div className="">
-                <div className="text-xl">{item.name}</div>
+                <div className="text-xl">{item.instructorName}</div>
                 <div className="mt-1">
-                  {item.genres.map((genre, index) => (
+                  {item.genres.map((genres, index) => (
                     <span key={index} className="px-3 py-0.5 mr-1 font-sm text-gray-600 bg-gray-200 rounded-full">
-                      {genre}
+                      {genres}
                     </span>
                   ))}
                 </div>
-                <div className="mt-3 text-sm text-gray-500">{item.caption}</div>
-                <div className="mt-1 text-sm text-gray-500">Beginner lesson, kids lesson, College les...</div>
+                <div className="mt-3 text-sm text-gray-500">{item.selfIntro}</div>
               </div>
             </div>
           </div>
           
           <div 
-            className='bg-white text-white text-base px-4 py-2 ml-auto border border-gray-800 text-gray-800 rounded-md h-fit'
+            className='bg-white text-gray-600 text-base whitespace-nowrap px-4 py-2 ml-auto border border-gray-800 text-gray-800 rounded-md h-fit'
             onClick={() => onClick(item)}
           >
             View Profile
@@ -52,20 +55,19 @@ export default function StudioIdMedia() {
 
   const cardData = [
     {
-      name: "Bboy Dan",
+      studioInstructorId: 'p9123890fino',
+      instructorName: "Bboy Dan",
       genres: ["Breaking", "Hip Hop","House"], 
-      caption: "This is Dan",
+      selfIntro: 'One of the first worldwide bboys from Japan, Bboy Taisuke teaches advaned breaking.',
+      profilePicture: null
     },
     {
-      name: "COCO",
-      genres: ["Hip Hop", "Breaking"],
-      caption: "This is COCO",
-    },
-    {
-      name: "Milk",
-      genres: ["Hip Hop"],
-      caption: "This is Milk",
-    },
+      studioInstructorId: 'fwd98ihon',
+      instructorName: 'Hozin',
+      genres: ['ポップ','クランプ','リズムトレーニング'],
+      selfIntro: 'I teach pop, krump, and rhythm training',
+      profilePicture: null,
+    },    
   ];
 
   return (
